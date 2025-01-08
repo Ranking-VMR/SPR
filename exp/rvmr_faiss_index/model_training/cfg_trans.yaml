@@ -1,0 +1,55 @@
+MODEL:
+  CLIP:
+    TYPE: CLIP-ViT-L-14
+  QFEAT_MODEL:
+    PROJ: True
+  TEMP_MODEL:
+    TYPE: seqTransf
+    PROJ: True 
+    MAX_POS_EMB: 32
+    NUM_LAYER: 6
+  LOSS:
+    TYPE: MILNCELoss
+  CHPK_PATH: null
+
+DATASETS:
+  VID_FEAT_PATH: ./data/TVR/CLIP_feature
+  QUERY_FEAT_PATH: ./data/TVR/TVR-Ranking/q_feats/all_queries
+  SEG_DURATION: 4
+  TRAIN_ANNO_PATH: ./data/TVR/TVR-Ranking/seg_anno
+  TRAIN_TOPK_POS: 40
+  TRAIN_POS_THRESH: 0.3
+  VAL_ANNO_PATH: ./data/TVR/TVR-Ranking/seg_anno
+  TEST_ANNO_PATH: ./data/TVR/TVR-Ranking/seg_anno
+  CORPUS_ANNO_PATH: ./data/TVR/TVR-Ranking/seg_anno
+
+DATALOADER:
+  NUM_WORKERS: 4
+
+SOLVER:
+  # optimizer & lr_scheduler related arguments
+  OPTIM:
+    LR: 5e-4
+    COEF_LR: 0.01
+    WEIGHT_DECAY: 1e-3
+    GRAD_MAX_NORM: 5.0
+    WARMUP_PROPORTION: 0.05
+    MAX_EPOCH: 30
+    LR_SCHEDULER: cosine
+  # dataloader related arguments
+  BATCH_SIZE: 256
+  # training arguments
+  STEP_LOG: 100
+  STEP_EVAL: 1000
+  CHPK_PATH: ./data/models/FrozenCLIP4Video
+
+TEST:
+  TOPK: [100, 500, 1000]
+  BATCH_SIZE: 1024
+
+# if you want to use wandb, please fill in the following information.
+WANDB:
+  PROJECT: "TVR-Ranking Segment-Query Alignment"
+  GROUP: ${MODEL.TEMP_MODEL.TYPE}
+  JOB_TYPE: ${MODEL.LOSS.TYPE}
+  NAME: "larger_trans_top40_thresh0.3" # for reminder
