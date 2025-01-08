@@ -3,7 +3,7 @@
 This is implementation for the paper "A Flexible and Scalable Framework for Video Moment Search".
 
 ![overview](/figures/Framework.png)
-<center style="font-size:14px;color:#C0C0C0;text-decoration:underline">The Segment-Proposal-Ranking (SPR) framework. All videos are divided into non-overlapping, equal-length segments (e.g., 4 seconds) for indexing and searching. The final results are computed based on the relevant segments retrieved.</center>
+<center>**The Segment-Proposal-Ranking (SPR) framework. All videos are divided into non-overlapping, equal-length segments (e.g., 4 seconds) for indexing and searching. The final results are computed based on the relevant segments retrieved.**</center>
 
 ## Prerequisites
 The conda environment of SPR can be built as follow:
