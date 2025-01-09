@@ -12,9 +12,9 @@ The conda environment of SPR can be built as follow:
 conda create --name spr python=3.9
 conda activate spr
 conda install pytorch==1.13.1 torchvision==0.14.1 torchaudio==0.13.1 pytorch-cuda=11.7 -c pytorch -c nvidia
-pip install transformers==4.36.1
-pip install wandb==0.17.9
-
+pip install transformers==4.36.1 wandb==0.17.9
+conda install -c pytorch -c nvidia faiss-gpu=1.8.0
+pip install h5py==3.10.0 loguru==0.7.2 terminaltables==3.1.10 easydict==1.13
 ```
 
 ## Preparation
