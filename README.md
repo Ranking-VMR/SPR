@@ -9,6 +9,12 @@ This is implementation for the paper "A Flexible and Scalable Framework for Vide
 The conda environment of SPR can be built as follow:
 ```shell script
 # preparing environment via conda
+conda create --name spr python=3.9
+conda activate spr
+conda install pytorch==1.13.1 torchvision==0.14.1 torchaudio==0.13.1 pytorch-cuda=11.7 -c pytorch -c nvidia
+pip install transformers==4.36.1
+pip install wandb==0.17.9
+
 ```
 
 ## Preparation
