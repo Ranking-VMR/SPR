@@ -34,12 +34,13 @@ sh exp/rvmr_faiss_index/build_faiss_index/run.sh
 ```
 
 ### Online Segment Retrieval and Evaluation
+We are now able to retrieve the relevant moments among corpus via the build indexes (*flat L2*, *IVF*, and *IVFPQ*):
 ```shell script
 sh exp/rvmr_faiss_index/retrieval_eval/run.sh
 ```
 
 ### Training Moment Refinement and Re-ranking Model
-This step trainings the model for moment refinement and re-ranking. We take the training of $SPR_{ReLo}-L$ model for example:
+This step trains the model for moment refinement and re-ranking. We take the training of $SPR_{ReLo}-L$ model for example:
 ```shell script
 sh exp/rvmr_faiss_index/refine_model_training/run.sh
 ```
