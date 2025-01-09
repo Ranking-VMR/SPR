@@ -18,7 +18,7 @@ pip install h5py==3.10.0 loguru==0.7.2 terminaltables==3.1.10 easydict==1.13
 ```
 
 ## Preparation
-Please download the related files here: (website of files) and place it to `./data/` directory.
+Please download the related files from [Onedrive]([https://markdown.com.cn](https://entuedu-my.sharepoint.com/:u:/g/personal/chongzhi001_e_ntu_edu_sg/EdI8pzKqoqtKkZhzFutbsZEBP79EXtbv1IzTiWasiNXM8g?e=9Ycsls)), and place the unzipped folder to `SPR/` directory.
 
 ## Quick Start
 ### Training Dual Feature Projectors for Segment Retrieval
