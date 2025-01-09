@@ -3,15 +3,15 @@ PYTHONPATH="$(dirname $0)/../../../..":$PYTHONPATH \
   python ./tasks/rvmr_seg_retr_faiss/stage3_model_training.py \
     --results_path          ./data/reloclnet \
     --train_path            ./data/TVR/TVR-Ranking/ori_anno/train_top40.json \
-    --train_pos_neg_path    .data/TVR/TVR-Ranking/coarse_pred/train_top40_pos_neg_samples_context_8.json \
+    --train_pos_neg_path    ./data/TVR/TVR-Ranking/coarse_pred/train_top40_pos_neg_samples_context_8.json \
     --val_path              ./data/TVR/TVR-Ranking/ori_anno/val.json \
-    --val_coarse_pred_path  .data/TVR/TVR-Ranking/coarse_pred/val_coarse_proposals.json \
+    --val_coarse_pred_path  ./data/TVR/TVR-Ranking/coarse_pred/val_coarse_proposals.json \
     --test_path             ./data/TVR/TVR-Ranking/ori_anno/test.json \
-    --test_coarse_pred_path .data/TVR/TVR-Ranking/coarse_pred/test_coarse_proposals.json \
+    --test_coarse_pred_path ./data/TVR/TVR-Ranking/coarse_pred/test_coarse_proposals.json \
     --video_len_path        ./data/TVR/TVR-Ranking/ori_anno/video_corpus_sorted.json \
-    --desc_bert_path        .data/TVR/TVR_feature/bert_feature/query_tvrr/query_bert.h5 \
-    --video_feat_path       .data/TVR/TVR_feature/video_feature/tvr_i3d_rgb600_avg_cl-1.5.h5 \
-    --sub_bert_path         .data/TVR/TVR_feature/bert_feature/sub_query/tvr_sub_pretrained_w_sub_query_max_cl-1.5.h5 \
+    --desc_bert_path        ./data/TVR/TVR_feature/bert_feature/query_tvrr/query_bert.h5 \
+    --video_feat_path       ./data/TVR/TVR_feature/video_feature/tvr_i3d_rgb600_avg_cl-1.5.h5 \
+    --sub_bert_path         ./data/TVR/TVR_feature/bert_feature/sub_query/tvr_sub_pretrained_w_sub_query_max_cl-1.5.h5 \
     --n_epoch               50 \
     --max_es_cnt            -1 \
     --hard_negative_start_epoch 10 \
