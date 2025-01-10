@@ -1,6 +1,6 @@
 # A Flexible and Scalable Framework for Video Moment Search
 
-This is implementation for the paper "A Flexible and Scalable Framework for Video Moment Search".
+This is implementation for the paper "A Flexible and Scalable Framework for Video Moment Search": [ArXiv version](https://arxiv.org/abs/2501.05072).
 
 ![overview](/figures/Framework.png)
 <center>The Segment-Proposal-Ranking (SPR) framework. All videos are divided into non-overlapping, equal-length segments (e.g., 4 seconds) for indexing and searching. The final results are computed based on the relevant segments retrieved.</center>
@@ -49,4 +49,18 @@ sh exp/rvmr_faiss_index/retrieval_eval/run.sh
 This step trains the model for moment refinement and re-ranking. We take the training of $SPR_{ReLo}-L$ model for example:
 ```shell script
 sh exp/rvmr_faiss_index/refine_model_training/run.sh
+```
+
+## Citation
+If you feel this project helpful to your research, please cite our work.
+```
+@misc{zhang2025flexiblescalableframeworkvideo,
+      title={A Flexible and Scalable Framework for Video Moment Search}, 
+      author={Chongzhi Zhang and Xizhou Zhu and Aixin Sun},
+      year={2025},
+      eprint={2501.05072},
+      archivePrefix={arXiv},
+      primaryClass={cs.IR},
+      url={https://arxiv.org/abs/2501.05072}, 
+}
 ```
